@@ -46,13 +46,19 @@ body > footer{
     width: 100%;
     background: #09f;
     padding: 10px 0;
+    height: 100px;
 }
 body > header > hgroup{
     position: relative;
     margin-left: 10px;
 }
+h1,h2,h3, .nota{float:right;}
+h1{font-size: 24px;}
+h2{font-size: 18px;}
+.nota{font-size: 15px;float:right;}
 hgroup{
    color: #fff; 
+   width: 220px;
 }
 #pagina{
     margin: 0 auto;
@@ -94,5 +100,14 @@ input[type="submit"],
 input[type="button"]{
     width: 10%;
     padding: 10px 0;
+ }
+ footer{
+     margin-top: -88px;
+     line-height: 100px;
+ }
+ footer p{
+     color: #fff;
+     text-align: center;
+     font-size: 14px;
  }
 

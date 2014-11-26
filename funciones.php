@@ -15,7 +15,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
+/**
+ * Muestra la ayuda
+ * @return type
+ */
+function ayuda() {
+    $linea = "";
+    $abierto = fopen("ayuda.txt", "r");
+    while(!feof($abierto)){
+        $linea .= fgets($abierto);
+    }
+    fclose($abierto);
+    return $linea; 
+}
 /**
  * Hace un "cat" del fichero
  * @param type $fichero

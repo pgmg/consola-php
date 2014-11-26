@@ -1,0 +1,5 @@
+*** Comandos habilitados ***
+help, ayuda, ? : Muestra esta ayuda.
+cat : Lista un fichero. 
+cls : Limpia la consola.
+pwd : Indica el directorio actual.

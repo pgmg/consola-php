@@ -25,7 +25,7 @@ if(isset($_POST['enviar'])){
         case "ayuda":
         case "?":
         case "help":
-            $consola = "cat = lista un fichero; pwd = directorio actual";
+            $consola = ayuda();
         break;
     
         case "cls":
