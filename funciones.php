@@ -27,7 +27,6 @@ function contFichero($fichero){
     while(!feof($abierto)){
         $linea .= fgets($abierto);
     }
-    
     fclose($abierto);
     return $linea;
 }
@@ -36,4 +35,37 @@ function contFichero($fichero){
  */
 function pwd() {
     return getcwd();
+}
+/**
+ * Borra un fichero
+ * @param type $fichero
+ * @return string
+ */
+function borrarFichero($fichero){
+    unlink($fichero);
+    return "fichero borrado!";
+}
+/**
+ * Unir un fichero
+ * @param type $fichero1
+ * @param type $fichero2
+ */
+function uneFicheros($fichero1, $fichero2){
+    $fp1 = fopen($fichero1, "a+");
+    $fp2 = file_get_contents($fichero2);
+    fwrite($fp1, $fp2);
+    return "Esta hecho";
+}
+/**
+ * Cifra ficheros base64
+ * @param type $fichero
+ */
+function cifraFichero($fichero){
+    $linea = "";
+    $abierto = fopen($fichero, "r");
+    while(!feof($abierto)){
+        $linea .= base64_encode(fgets($abierto));
+    }
+    fclose($abierto);
+    return $linea;
 }

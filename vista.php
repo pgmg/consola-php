@@ -20,9 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <meta charset="UTF-8">
         <title>Comandos PHP</title>
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
-        <style>
-
-        </style>
     </head>
     <body>
         <form action="index.php" method="post">
