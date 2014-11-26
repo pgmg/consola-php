@@ -40,6 +40,10 @@ if(isset($_POST['enviar'])){
             $consola = contFichero("elfichero.txt");
         break;
         
+        case "prueba":
+            prueba();
+            break;
+        
         default :
         $consola = "comando erroneo!";
         break;

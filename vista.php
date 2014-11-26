@@ -22,12 +22,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
     </head>
     <body>
+        <div id="pagina">
         <form action="index.php" method="post">
             <h1>PHP SHELL v0.1</h1>
-            <textarea name="consola"><?php echo $consola;?></textarea>
+            <textarea name="consola" readonly="readonly"><?php echo $consola;?></textarea>
             <input type="text" name="comando" placeholder="Introduce el comando" autofocus="">
             <input type="submit" value="Ejecutar" name="enviar">
             <input type="button" onclick="window.location='index.php';" value="Reiniciar">
         </form>
+        </div>
     </body>
 </html>

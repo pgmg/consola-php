@@ -68,3 +68,7 @@ function cifraFichero($fichero){
     fclose($abierto);
     return $linea;
 }
+
+function prueba( $file = "prueba.txt"){
+    fopen($file, "a");
+}
