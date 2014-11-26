@@ -1,0 +1,41 @@
+Practica 5. Ficheros. "PHP Shell"
+Crear un script en php donde se realicen las siguientes funciones sobre los ficheros:
+
+Operaciones sobre ficheros:
+
+- mostrar contenido fichero (cat fichero).
+- eliminar fichero (rm fichero).
+- unir ficheros (join fichero1 fichero2).
+- cifrar ficheros usando metodo base64 (cifrar fichero). Puedes usar algun metodo mas seguro. http://www.rinconastur.com/php/php19.php
+- descifrar ficheros usando metodo base64 (descifrar fichero). Puedes usar algun metodo mas seguro. http://www.rinconastur.com/php/php19.php
+- copiar fichero (copy fichero1 fichero2).
+- renombrar fichero (rename fichero1 fichero2).
+- editar fichero (edit fichero1).
+- tamaño fichero (size fichero).
+- tipo fichero (type fichero).
+
+Operaciones sobre archivos:
+
+- cambiar de directorio (cd directorio).
+- mostrar directorio actual (pwd).
+- borrar directorio (rmdir directorio).
+- mostrar contendido directorio (dir y ls -l).
+
+Otras operaciones:
+- borrar pantalla (cls, clear).
+
+Para ello deben crear un formulario donde pondran un campo del tipo textarea donde se mostraran los resultados y 
+input text donde se introduciran los comandos.
+
+Cada operacion sera una funcion.
+
+Nota: 
+
++ Pueden usar el modelo modelo-vista-controlador.
+
++ Para el parseo del comandos pueden usar:
+$comando  = "comando fichero1 fichero2";
+$opciones = explode(" ", $comando);
+echo $opciones[0]; // comando
+echo $opciones[1]; // fichero1
+echo $opciones[2]; // fichero2
