@@ -19,7 +19,7 @@ $consola = "";
 if(isset($_POST['enviar'])){
     $comando_pasado = explode(" ", $_POST['comando']);
     $comando = $comando_pasado[0];
-    $parametro = $comando_pasado[1];
+    
     
     include 'funciones.php';
     
@@ -37,7 +37,8 @@ if(isset($_POST['enviar'])){
         break;
         // Como pasar dos parámetros
         case "cd":
-        cambiaDir($parametro);
+            $parametro = $comando_pasado[1];
+            $consola = cambiaDir($parametro);
         break;
         case "crd":
             $consola = "Hecho por Pedro Gabriel Manrique Gutiérrez";
@@ -48,8 +49,19 @@ if(isset($_POST['enviar'])){
         case "prueba":
             prueba();
             break;
+        case "rmdir":
+            $parametro = $comando_pasado[1];
+            $consola = borrarDirectorio($parametro);
+            break;
+        case "dir":
+        case "ls -l":
+            if(isset($comando_pasado[1])):$par = $comando_pasado[1];
+            else:$par="";
+            endif;
+            $consola = listarDirectorio($par);
+            break;
         default :
-        $consola = "comando erroneo!";
+            $consola = "comando erroneo!";
         break;
     }
     

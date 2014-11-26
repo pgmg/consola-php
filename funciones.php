@@ -89,7 +89,7 @@ function prueba( $file = "prueba.txt"){
  */
  function cambiaDir($dir_destino) {
     chdir($dir_destino);
-    return "estamos en " . getcwd();
+    return "estamos en " . pwd();
 }
 /**
  * Borrar directorio
@@ -105,3 +105,17 @@ function pwd() {
     return getcwd();
 }
 
+/**
+ * Lee el contenido del directorio
+ * @param type $param
+ * @return type string
+ */
+function listarDirectorio($param = null) {
+    if(!$param):$param = getcwd();endif;
+    $lista = "";
+    $dir = opendir($param);
+    while($archivos = readdir($dir)){
+        $lista.= $archivos. "\n";
+    }
+    return $lista;
+}
