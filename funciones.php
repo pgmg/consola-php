@@ -30,12 +30,6 @@ function contFichero($fichero){
     return $linea;
 }
 /**
- * Directorio actual
- */
-function pwd() {
-    return getcwd();
-}
-/**
  * Borra un fichero
  * @param type $fichero
  * @return string
@@ -68,7 +62,33 @@ function cifraFichero($fichero){
     fclose($abierto);
     return $linea;
 }
-
+/** Operaciones con directorio **/
+/**
+ * 
+ * @param type $file
+ */
 function prueba( $file = "prueba.txt"){
     fopen($file, "a");
 }
+
+/**
+ * Cambiar de directorio
+ * @param type $dir_destino
+ */
+ function cambiaDir($dir_destino) {
+    chdir($dir_destino);
+}
+/**
+ * Borrar directorio
+ * @param type $dir
+ */
+function borrarDirectorio($dir) {
+    rmdir($dir);
+}
+/**
+ * Directorio actual
+ */
+function pwd() {
+    return getcwd();
+}
+

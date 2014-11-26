@@ -25,7 +25,7 @@ if(isset($_POST['enviar'])){
         case "ayuda":
         case "?":
         case "help":
-            $consola = "Esto es la ayuda";
+            $consola = "cat = lista un fichero; pwd = directorio actual";
         break;
     
         case "cls":
@@ -35,6 +35,10 @@ if(isset($_POST['enviar'])){
         case "pwd":
             $consola = pwd();
         break;
+        
+        case "cd":
+            
+            break;
     
         case "cat":
             $consola = contFichero("elfichero.txt");

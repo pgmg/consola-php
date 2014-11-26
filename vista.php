@@ -22,14 +22,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
     </head>
     <body>
+    <header>
+        <hgroup>
+            <h1>DSW - PHP</h1>  
+            <h2>Consola de Comandos</h2>
+            <div class="nota">2ºDAW - Turno Tarde</div>
+        </hgroup>
+    </header>
         <div id="pagina">
         <form action="index.php" method="post">
             <h1>PHP SHELL v0.1</h1>
-            <textarea name="consola" readonly="readonly"><?php echo $consola;?></textarea>
+            <textarea name="consola" readonly="readonly" placeholder=""><?php echo $consola;?></textarea>
             <input type="text" name="comando" placeholder="Introduce el comando" autofocus="">
             <input type="submit" value="Ejecutar" name="enviar">
             <input type="button" onclick="window.location='index.php';" value="Reiniciar">
         </form>
         </div>
+        <footer><p>Pedro Gabriel Manrique Gutiérrez &COPY;2014-2015</p></footer>
     </body>
 </html>
