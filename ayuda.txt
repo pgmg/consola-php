@@ -1,5 +1,7 @@
 *** Comandos habilitados ***
 help, ayuda, ? : Muestra esta ayuda.
 cat : Lista un fichero. 
+cd  : Cambiar de directorio.
 cls : Limpia la consola.
+crd : Muestra los créditos.
 pwd : Indica el directorio actual.

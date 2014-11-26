@@ -17,7 +17,9 @@
  */
 $consola = "";
 if(isset($_POST['enviar'])){
-    $comando = $_POST['comando'];
+    $comando_pasado = explode(" ", $_POST['comando']);
+    $comando = $comando_pasado[0];
+    $parametro = $comando_pasado[1];
     
     include 'funciones.php';
     
@@ -27,27 +29,25 @@ if(isset($_POST['enviar'])){
         case "help":
             $consola = ayuda();
         break;
-    
         case "cls":
             $consola = "";
         break;
-    
         case "pwd":
             $consola = pwd();
         break;
-        
+        // Como pasar dos parámetros
         case "cd":
-            
+        cambiaDir($parametro);
+        break;
+        case "crd":
+            $consola = "Hecho por Pedro Gabriel Manrique Gutiérrez";
             break;
-    
         case "cat":
             $consola = contFichero("elfichero.txt");
         break;
-        
         case "prueba":
             prueba();
             break;
-        
         default :
         $consola = "comando erroneo!";
         break;

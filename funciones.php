@@ -89,6 +89,7 @@ function prueba( $file = "prueba.txt"){
  */
  function cambiaDir($dir_destino) {
     chdir($dir_destino);
+    return "estamos en " . getcwd();
 }
 /**
  * Borrar directorio

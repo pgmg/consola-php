@@ -30,21 +30,11 @@ body{
 header{
     z-index: 1000;
 }
-article > header > h1{
-    font-size: 34px;
-    color: #09f;
-    padding: 10px 0;
-    width: 100%;
-    display:block;
-    float: left;
-}
-article{
-    margin: 10px 0 0 0;
-}
+
 body > header,
 body > footer{
     width: 100%;
-    background: #09f;
+    background: yellowgreen;
     padding: 10px 0;
     height: 100px;
 }
@@ -68,7 +58,9 @@ hgroup{
 form{
     width:100%;
 }
-
+form > h1{
+    color: yellowgreen;
+}
 textarea{
     resize: none;
     width: 100%;
@@ -90,11 +82,12 @@ textarea{
 }
 /** Fin animación **/
 input[name="comando"]{
-    width: 78%;
-    padding: 10px 0px;
+    width: 77%;
+    padding: 10px 0 10px 5px;
+    margin-left: 3px;
 }
 input[name="comando"]:focus{
-    border: 1px #09f solid;
+    border: 1px yellowgreen solid;
 }
 input[type="submit"],
 input[type="button"]{
@@ -109,5 +102,7 @@ input[type="button"]{
      color: #fff;
      text-align: center;
      font-size: 14px;
+     font-weight: bold;
+     text-shadow: 1px 1px #aaa, -1px -1px #888;
  }
 
