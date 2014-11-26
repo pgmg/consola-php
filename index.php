@@ -22,23 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <head>
         <meta charset="UTF-8">
         <title>Comandos PHP</title>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <style>
-            *{padding:0;margin:0;}
-            form{
-                width:100%;
-            }
-            textarea{
-                resize: none;
-                width: 90%;
-                height: 100px;
-                text-indent: none;
-            }
-            input[name="comando"]{
-                width: 80%;
-            }
-            input[type="submit"]{
-                width: 10%;
-            }
+
         </style>
     </head>
     <body>
