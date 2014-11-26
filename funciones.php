@@ -22,16 +22,18 @@
  * @param type $fichero
  */
 function contFichero($fichero){
+    $linea = "";
     $abierto = fopen($fichero, "r");
     while(!feof($abierto)){
-        echo fgets($abierto);
+        $linea .= fgets($abierto);
     }
-    fclose($abierto);
     
+    fclose($abierto);
+    return $linea;
 }
 /**
  * Directorio actual
  */
 function pwd() {
-    echo getcwd();
+    return getcwd();
 }

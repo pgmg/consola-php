@@ -18,7 +18,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     Created on : 26-nov-2014, 16:45:27
     Author     : Pedro Gabriel Manrique Gutiérrez <pedrogm@grafycomp.com>
 */
-*{padding:0;margin:0;}
+*{
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+}
 
 form{
     width:100%;
@@ -26,15 +30,38 @@ form{
 
 textarea{
     resize: none;
-    width: 90%;
-    height: 100px;
+    width: 95%;
+    height: 400px;
     text-indent: none;
+    background: #000;
+    color: yellowgreen;
+    padding: 5px;
 }
 
 input[name="comando"]{
-    width: 80%;
+    width: 70%;
+    padding: 10px;
 }
-
+input[name="comando"]:focus{
+    border: 1px #09f solid;
+}
 input[type="submit"]{
     width: 10%;
+    padding: 10px 0;
+    background: #09f;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: bold;
 }
+a{
+    width: 10%;
+    padding: 9px;
+    border: 1px solid #09f;
+    background: #09f;
+    border-radius: 3px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
