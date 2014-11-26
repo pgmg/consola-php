@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             <textarea name="consola"><?php echo $consola;?></textarea>
             <input type="text" name="comando" placeholder="Introduce el comando" autofocus="">
             <input type="submit" value="Ejecutar" name="enviar">
-            <a href="index.php">Reiniciar</a>
+            <input type="button" onclick="window.location='index.php';" value="Reiniciar">
         </form>
     </body>
 </html>

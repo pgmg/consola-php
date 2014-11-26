@@ -30,7 +30,7 @@ form{
 
 textarea{
     resize: none;
-    width: 95%;
+    width: 92%;
     height: 400px;
     text-indent: none;
     background: #000;
@@ -45,23 +45,9 @@ input[name="comando"]{
 input[name="comando"]:focus{
     border: 1px #09f solid;
 }
-input[type="submit"]{
+input[type="submit"],
+input[type="button"]{
     width: 10%;
     padding: 10px 0;
-    background: #09f;
-    border: 0;
-    color: #fff;
-    border-radius: 3px;
-    font-weight: bold;
-}
-a{
-    width: 10%;
-    padding: 9px;
-    border: 1px solid #09f;
-    background: #09f;
-    border-radius: 3px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-}
+ }
 
