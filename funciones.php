@@ -91,6 +91,10 @@ function prueba( $file = "prueba.txt"){
     chdir($dir_destino);
     return "estamos en " . pwd();
 }
+function creaDirectorio($param) {
+    mkdir($param);
+    return "Directorio " . $param . "creado!";
+}
 /**
  * Borrar directorio
  * @param type $dir

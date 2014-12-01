@@ -18,8 +18,7 @@
 $consola = "";
 if(isset($_POST['enviar'])){
     $comando_pasado = explode(" ", $_POST['comando']);
-    $comando = $comando_pasado[0];
-    
+    $comando = strtolower($comando_pasado[0]);
     
     include 'funciones.php';
     
@@ -30,6 +29,7 @@ if(isset($_POST['enviar'])){
             $consola = ayuda();
         break;
         case "cls":
+        case "clear":
             $consola = "";
         break;
         case "pwd":
@@ -44,16 +44,21 @@ if(isset($_POST['enviar'])){
             $consola = creditos();
             break;
         case "cat":
-            $consola = contFichero("elfichero.txt");
+            $parametro = $comando_pasado[1];
+            $consola = contFichero($parametro);
         break;
         case "prueba":
             prueba();
             break;
+        case "mkdir":
+            $parametro = $comando_pasado[1];
+            $consola = creaDirectorio($parametro);
         case "rmdir":
             $parametro = $comando_pasado[1];
             $consola = borrarDirectorio($parametro);
             break;
         case "dir":
+        case "ls":
         case "ls -l":
             if(isset($comando_pasado[1])):$par = $comando_pasado[1];
             else:$par="";
