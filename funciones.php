@@ -119,3 +119,10 @@ function listarDirectorio($param = null) {
     }
     return $lista;
 }
+
+function creditos(){
+    $creditos = "Hecho por Pedro Gabriel Manrique Gutiérrez \n";
+    $creditos.= "2º DAW - DSW - Turno de Tarde";
+    $creditos.= "(c) 2014-2015";
+    return $creditos;
+}

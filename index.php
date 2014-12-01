@@ -40,8 +40,8 @@ if(isset($_POST['enviar'])){
             $parametro = $comando_pasado[1];
             $consola = cambiaDir($parametro);
         break;
-        case "crd":
-            $consola = "Hecho por Pedro Gabriel Manrique Gutiérrez";
+        case "credits":
+            $consola = creditos();
             break;
         case "cat":
             $consola = contFichero("elfichero.txt");
