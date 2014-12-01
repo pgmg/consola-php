@@ -53,10 +53,15 @@ if(isset($_POST['enviar'])){
         case "crea":
             $nombre = $comando_pasado[1];
             $contenido = $comando_pasado[2];
-            creaFichero($nombre, $contenido);
+            $consola.= creaFichero($nombre, $contenido);
             break;
-    // Borra un fichero
-    
+        case "cifra":
+            $consola = cifraFichero($comando_pasado[1]);
+            break;
+        // Borra un fichero
+        case "delete":
+            $consola .= borrarFichero($comando_pasado[1]);
+            break;
         // Crea directorio
         case "mkdir":
             $parametro = $comando_pasado[1];

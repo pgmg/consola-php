@@ -4,7 +4,9 @@ cat : Lista un fichero.
 cd  : Cambiar de directorio.
 cls : Limpia la consola.
 crd : Muestra los créditos.
+delete: Borra fichero. Ej.: delete pepe.txt
 join: Une dos ficheros, en el segundo de ellos.
 mkdir: Crea un directorio dentro de la ruta actual.
 pwd : Indica el directorio actual.
+rmdir: Borra el directorio.
 
