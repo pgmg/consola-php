@@ -19,6 +19,7 @@ $consola = "";
 if(isset($_POST['enviar'])){
     $comando_pasado = explode(" ", $_POST['comando']);
     $comando = strtolower($comando_pasado[0]);
+    $consola = $_POST['consola'];
     
     include 'funciones.php';
     
@@ -26,36 +27,46 @@ if(isset($_POST['enviar'])){
         case "ayuda":
         case "?":
         case "help":
-            $consola = ayuda();
+            $consola .= ayuda();
         break;
         case "cls":
         case "clear":
+        case "clr":
             $consola = "";
         break;
         case "pwd":
-            $consola = pwd();
+            $consola .= pwd();
         break;
         // Como pasar dos parámetros
         case "cd":
             $parametro = $comando_pasado[1];
-            $consola = cambiaDir($parametro);
+            $consola .= cambiaDir($parametro);
         break;
         case "credits":
-            $consola = creditos();
+            $consola .= creditos();
             break;
         case "cat":
             $parametro = $comando_pasado[1];
-            $consola = contFichero($parametro);
+            $consola .= contFichero($parametro);
         break;
-        case "prueba":
-            prueba();
+    // Crea fichero
+        case "crea":
+            $nombre = $comando_pasado[1];
+            $contenido = $comando_pasado[2];
+            creaFichero($nombre, $contenido);
             break;
+    // Borra un fichero
+    
+        // Crea directorio
         case "mkdir":
             $parametro = $comando_pasado[1];
-            $consola = creaDirectorio($parametro);
+            $consola .= creaDirectorio($parametro);
+            break;
+        
+        // Borrar directorio
         case "rmdir":
             $parametro = $comando_pasado[1];
-            $consola = borrarDirectorio($parametro);
+            $consola .= borrarDirectorio($parametro);
             break;
         case "dir":
         case "ls":
@@ -63,10 +74,21 @@ if(isset($_POST['enviar'])){
             if(isset($comando_pasado[1])):$par = $comando_pasado[1];
             else:$par="";
             endif;
-            $consola = listarDirectorio($par);
+            $consola .= listarDirectorio($par);
+            break;
+        
+        // Unir ficheros
+        case "join":
+                $consola = uneFicheros(
+                        $comando_pasado[1], 
+                        $comando_pasado[2]);
+            break;
+        // Editar fichero
+        case "edit":
+            exec("notepad.exe");
             break;
         default :
-            $consola = "comando erroneo!";
+            $consola .= "comando erroneo!";
         break;
     }
     

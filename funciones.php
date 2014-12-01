@@ -29,6 +29,18 @@ function ayuda() {
     return $linea; 
 }
 /**
+ * 
+ * @param type $nombre
+ * @param type $contenido
+ */
+function creaFichero($nombre, $contenido) {
+    if(!is_file($nombre)){
+        $archivo = fopen($nombre, "w");
+        fwrite($archivo, $contenido . PHP_EOL);
+        fclose($archivo);
+    }
+}
+/**
  * Hace un "cat" del fichero
  * @param type $fichero
  */
@@ -59,7 +71,7 @@ function uneFicheros($fichero1, $fichero2){
     $fp1 = fopen($fichero1, "a+");
     $fp2 = file_get_contents($fichero2);
     fwrite($fp1, $fp2);
-    return "Esta hecho";
+    return "Esta hecho, nuevo fichero ".$fp2;
 }
 /**
  * Cifra ficheros base64
@@ -75,13 +87,6 @@ function cifraFichero($fichero){
     return $linea;
 }
 /** Operaciones con directorio **/
-/**
- * 
- * @param type $file
- */
-function prueba( $file = "prueba.txt"){
-    fopen($file, "a");
-}
 
 /**
  * Cambiar de directorio
@@ -91,9 +96,20 @@ function prueba( $file = "prueba.txt"){
     chdir($dir_destino);
     return "estamos en " . pwd();
 }
+/**
+ * Crear directorio
+ * @param type $dir
+ * @return string
+ */
 function creaDirectorio($param) {
-    mkdir($param);
-    return "Directorio " . $param . "creado!";
+    if(!is_dir($param)){
+        if(mkdir($param, 0755, true) ){
+            return "Directorio " . $param . " creado!";
+        }
+        else{
+            return "No se ha podido crear";
+        }
+    }
 }
 /**
  * Borrar directorio
@@ -119,7 +135,10 @@ function listarDirectorio($param = null) {
     $lista = "";
     $dir = opendir($param);
     while($archivos = readdir($dir)){
-        $lista.= $archivos. "\n";
+        if(!is_dir($archivos)): 
+            $tam_b = filesize($archivos)." bytes";else: $tam_b = ""; endif;
+            
+        $lista.= $archivos." ".filetype($archivos)." ".$tam_b. "\n";
     }
     return $lista;
 }

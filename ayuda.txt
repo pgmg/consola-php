@@ -1,7 +1,10 @@
-*** Comandos habilitados ***
+﻿*** Comandos habilitados ***
 help, ayuda, ? : Muestra esta ayuda.
 cat : Lista un fichero. 
 cd  : Cambiar de directorio.
 cls : Limpia la consola.
 crd : Muestra los créditos.
+join: Une dos ficheros, en el segundo de ellos.
+mkdir: Crea un directorio dentro de la ruta actual.
 pwd : Indica el directorio actual.
+
