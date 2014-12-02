@@ -49,12 +49,7 @@ if(isset($_POST['enviar'])){
             $parametro = $comando_pasado[1];
             $consola .= contFichero($parametro);
         break;
-    // Crea fichero
-        case "crea":
-            $nombre = $comando_pasado[1];
-            $contenido = $comando_pasado[2];
-            $consola.= creaFichero($nombre, $contenido);
-            break;
+
         case "cifra":
             $consola = cifraFichero($comando_pasado[1]);
             break;
@@ -89,8 +84,11 @@ if(isset($_POST['enviar'])){
                         $comando_pasado[2]);
             break;
         // Editar fichero
+           // Crea fichero
         case "edit":
-            exec("notepad.exe");
+            $nombre = $comando_pasado[1];
+            $contenido = $consola;
+            $consola.= creaFichero($nombre, $consola);
             break;
         default :
             $consola .= "comando erroneo!";

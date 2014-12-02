@@ -36,7 +36,7 @@ function ayuda() {
 function creaFichero($nombre, $contenido) {
     if(!is_file($nombre)){
         $archivo = fopen($nombre, "w");
-        fwrite($archivo, $contenido . PHP_EOL);
+        fwrite($archivo, $contenido);
         fclose($archivo);
     }
 }

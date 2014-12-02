@@ -1,0 +1,11 @@
+fichero borrado!fichero borrado!. dir 
+.. dir 
+.git dir 
+ayuda.txt file 397 bytes
+css dir 
+elfichero.txt file 1486 bytes
+funciones.php file 3670 bytes
+index.php file 3095 bytes
+nbproject dir 
+prueba.txt file 28 bytes
+vista.php file 1686 bytes
