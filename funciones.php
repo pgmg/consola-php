@@ -29,7 +29,7 @@ function ayuda() {
     return $linea; 
 }
 /**
- * 
+ * Crea un fichero con el contenido de la consola usando Edit
  * @param type $nombre
  * @param type $contenido
  */
@@ -119,14 +119,14 @@ function borrarDirectorio($dir) {
     rmdir($dir);
 }
 /**
- * Directorio actual
+ * Muestra el Directorio actual
  */
 function pwd() {
     return getcwd();
 }
 
 /**
- * Lee el contenido del directorio
+ * Lee el contenido del directorio especificado
  * @param type $param
  * @return type string
  */
@@ -143,6 +143,10 @@ function listarDirectorio($param = null) {
     return $lista;
 }
 
+/**
+ * Muestra los creditos del autor
+ * @return string
+ */
 function creditos(){
     $creditos = "Hecho por Pedro Gabriel Manrique Gutiérrez \n";
     $creditos.= "2º DAW - DSW - Turno de Tarde";
