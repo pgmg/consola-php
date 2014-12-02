@@ -86,8 +86,6 @@ function cifraFichero($fichero){
     fclose($abierto);
     return $linea;
 }
-/** Operaciones con directorio **/
-
 /**
  * Cambiar de directorio
  * @param type $dir_destino
@@ -124,7 +122,6 @@ function borrarDirectorio($dir) {
 function pwd() {
     return getcwd();
 }
-
 /**
  * Lee el contenido del directorio especificado
  * @param type $param
@@ -142,7 +139,6 @@ function listarDirectorio($param = null) {
     }
     return $lista;
 }
-
 /**
  * Muestra los creditos del autor
  * @return string
