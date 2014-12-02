@@ -73,6 +73,9 @@ function uneFicheros($fichero1, $fichero2){
     fwrite($fp1, $fp2);
     return "Esta hecho, nuevo fichero ".$fp2;
 }
+function copiaFichero($param1, $param2) {
+    copy($param1, $param2);
+}
 /**
  * Cifra ficheros base64
  * @param type $fichero
