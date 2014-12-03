@@ -20,6 +20,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <meta charset="UTF-8">
         <title>Comandos PHP</title>
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <script src="js/jquery.js"></script>
+        <script>
+            $(function() {
+                var data = $('textarea').val();
+                 var emoticon = ':)';
+                $('textarea').focus().val('').val(data);
+            }); 
+        </script>
     </head>
     <body>
     <header>
