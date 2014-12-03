@@ -41,7 +41,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <form action="index.php" method="post">
             <h1>PHP SHELL v0.1</h1>
             <textarea name="consola" readonly="readonly" placeholder=""><?php echo $consola;?></textarea>
-            <input type="text" name="comando" placeholder="Introduce el comando" autofocus="">
+            <input type="text" name="comando" placeholder="Introduce el comando" autofocus="" class="comando">
             <input type="submit" value="Ejecutar" name="enviar">
             <input type="button" onclick="window.location='index.php';" value="Reiniciar">
         </form>
