@@ -49,9 +49,15 @@ if(isset($_POST['enviar'])){
             $parametro = $comando_pasado[1];
             $consola .= contFichero($parametro);
         break;
-
-        case "cifra":
-            $consola = cifraFichero($comando_pasado[1]);
+        //  Copiar un fichero
+        case "copy":
+            $origen = $comando_pasado[1];
+            $destino = $comando_pasado[2];
+            $consola.= copiaFichero($origen, $destino);
+            break;
+        case "cifrar":
+            $fichero = $comando_pasado[1];
+            $consola = cifraFichero($fichero);
             break;
         // Borra un fichero
         case "delete":

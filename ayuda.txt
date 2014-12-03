@@ -2,7 +2,9 @@
 help, ayuda, ? : Muestra esta ayuda.
 cat : Lista un fichero. 
 cd  : Cambiar de directorio.
+cifrar: Codifica un archivo en base64. Ej.: cifrar fichero.txt
 cls : Limpia la consola.
+copy: Copia un archivo a otro. Ej.: copy origen destino
 crd : Muestra los créditos.
 delete: Borra fichero. Ej.: delete pepe.txt
 join: Une dos ficheros, en el segundo de ellos.

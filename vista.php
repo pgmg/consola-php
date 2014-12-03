@@ -38,6 +38,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             <input type="button" onclick="window.location='index.php';" value="Reiniciar">
         </form>
         </div>
-        <footer><p>Pedro Gabriel Manrique Gutiérrez &COPY;2014-2015</p></footer>
+        <footer><p>Pedro Gabriel Manrique Gutiérrez &COPY; 2014-2015</p></footer>
     </body>
 </html>

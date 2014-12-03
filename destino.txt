@@ -1,0 +1,12 @@
+. dir 
+.. dir 
+.git dir 
+ayuda.txt file 518 bytes
+caldo.txt file 254 bytes
+css dir 
+elfichero.txt file 1486 bytes
+funciones.php file 3849 bytes
+index.php file 3259 bytes
+nbproject dir 
+prueba.txt file 28 bytes
+vista.php file 1687 bytes
